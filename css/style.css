@@ -79,11 +79,10 @@ h1 {
 }
 
 /* CLASSE hide */
-/*
 .hide {
-    display: none !important;
+  display: none !important;
 }
-*/
+
 /* PLACAR */
 #scoreboard-container {
   text-align: center;
@@ -125,5 +124,4 @@ h1 {
   background-color: black;
   color: white;
   padding: 30px;
-  display: none;
 }/*# sourceMappingURL=style.css.map */
