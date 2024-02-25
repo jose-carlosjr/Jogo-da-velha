@@ -37,6 +37,30 @@ for(let i = 0; i < boxes.length; i++) {
     })
 }
 
+// EVENTO PARA SABER QUEM É O JOGADOR, BOT OU UM SEGUNDO JOGADOR
+for(let i = 0; i < buttons.length; i++) {
+    // ADICIONA O EVENTO CLIQUE NOS BOTÕES
+    buttons[i].addEventListener('click', function() {
+        secondPlayer = this.getAttribute('id')
+        
+        // ESCONDE OS BOTÕES QUANDO UM DELES É CLICADO
+        for(let j = 0; j < buttons.length; j++) {
+            buttons[j].style.display = 'none'
+        }
+
+        /* OU
+        buttons[0].style.display = 'none'
+        buttons[1].style.display = 'none'
+        */
+        
+        // REVELANDO O JOGO
+        setTimeout(() => {
+            const container = document.querySelector('#container')
+            container.classList.remove('hide')
+        }, 500);
+    })
+}
+
 // FUNÇÃO QUE CHECA A VEZ DE QUEM DEVE JOGAR
 function checkElemento(player1, player2) {
     if(player1 == player2) {
